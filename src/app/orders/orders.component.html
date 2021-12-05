@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 25px;
+  margin-bottom: 25px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 25px;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 25px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.images{
+    border-radius: 25px;
+   
+}
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+ 
+}
+.centered {
+   
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.centers{
+    position: absolute;
+  top: 30%;
+ 
+
+}
+.flip-card-back {
+  background-color:#007bff14;
+  color: black;
+  transform: rotateY(180deg);
+}
+h4,h5{
+  font-family: 'Sriracha', cursive;
+}
+</style>
+</head><body>
+  <nav class="navbar navbar-expand-lg navbar-dark " >
+        
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01"  >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:170px; height:60px"><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active" >
+          <a class="nav-link" routerLink="/consumerPage" style="color:black;font-size:20px;;font-weight:bolder;">Home<span class="sr-only">(current)</span></a>
+        </li>
+       
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" style="color:black;font-size:20px;;font-weight:bolder;">About</a>
+        </li>
+           
+        <li class="nav-item mr auto" >
+          <button   type="button" class="btn btn-success" class="nav-link "routerLink="/logout" style="font-size:20px;font-weight:bolder;margin-left: 875px;background-color: green;
+          color: white;width: 90px;margin-top: 5px;">logout</button>
+          
+          </li>
+      
+      </ul>
+      
+    </div>
+  </nav>
+
+    <div class="row offset-md-1" style="margin-top: 20px">
+        <div class="col-md-4" *ngFor="let ord of orders;let i=index">
+            <div class="flip-card" >
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="centered"><h4>{{ ordfarms[i].crop|titlecase }}</h4></div>
+                        <img src="http://localhost:8080/RESTAPI2018/image/{{ordproducts[i].imageName}}" alt="Avatar"
+                            style="width:300px;height:300px;" class="images">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="centers">
+                          <h5>Name :{{ ordcons[i].user.fullName }}</h5>
+                          <h5>Date of delivery :{{ ord.dateOfDelivery | date:'dd-MMM-yy'}}</h5>
+                        <h4>Status :{{ ord.status|titlecase }}</h4>
+                       
+                      
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>   
+          
+            body{
+    background-image: url(./assets/images/d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: wheat;
+    opacity: 0.9;
+}
+
+.h{
+    background-color:#02e2a452;
+    margin-left:350px;
+    text-align: center;
+    margin-bottom: auto;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    border-top-left-radius: 30px;
+    margin-right: 345px;
+    border-top-right-radius: 30px;
+    color: white;
+    
+}
+.fo{
+background-color: 	#02e2a452;
+    margin-left: 350px;
+    text-align: center;
+    margin-bottom: auto;
+   
+    margin-right: 345px;
+    color: black;
+}
+
+.header{
+    text-align: center;
+    color: green;
+}
+.di{
+    background-color: white;
+    padding-left: 32px;
+    margin-left: 400px;
+    margin-right: 350px;
+    color: black;
+    margin-bottom: 45px;
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+.name{
+    padding-top: 10px;
+    border-radius: 5px;
+}
+input{
+    margin-top: 8px;
+    padding-right: 120px;
+    border-radius: 5px;
+    padding-top: 5;
+}
+select{
+    padding-right: 185px;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+.id{
+    padding-right: 350px;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding-top: 5px;
+}
+button{
+    background-color: #57B846;
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 126px;
+    padding-left: 115px;
+    
+    margin-top: 20px;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+}
+
+.navbar-nav > li{
+        padding-left:10px;
+        padding-right:10px;
+        margin-top: 0.5px;
+              
+              }
+              .image{
+                margin-top: 0px;
+                margin-bottom: 0px;
+                margin-left: -40px;
+                padding-right:10px;
+                background-position: left;
+              }
+              .move{
+                padding-left: 120px;
+              }
+      
+      .container{
+          height: 100%;
+      }
+      ::placeholder{
+        color: black;
+        
+      }
+        </style>
+    </head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark " >
+        
+        
+      
+    <div class="collapse navbar-collapse" id="navbarColor01"  >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:170px; height:60px"><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active" >
+          <a class="nav-link" routerLink="/home" style="color:white;font-size:20px;;font-weight:bolder;">Home<span class="sr-only">(current)</span></a>
+        </li>
+       
+       
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about"style="color:white;font-size:20px;;font-weight:bolder;">About</a>
+        </li>
+      
+      </ul>
+      
+    </div>
+  </nav>
+    
+    <div class="container">
+      <div class="h">
+        <h1>REGISTRATION</h1>
+        </div>
+
+        
+        <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)" novalidate>
+          <div class="fo">
+            
+          
+    
+            <div class="name">
+              <!--UserName:<br />-->
+              <input   type="text" placeholder="UserName" ngModel #userName="ngModel" required name="userName" [(ngModel)]='address.user.userName'  ><br />
+              <div *ngIf="registerForm.touched && userName.errors?.required">Please enter your username</div>
+            </div>
+            <div class="name">
+             <!--Password:<br />-->
+              <input type="password" placeholder="Password" ngModel #password="ngModel" name="password" required ><br />
+              <div *ngIf="registerForm.touched && password.errors?.required">Please enter your password</div>
+            </div>
+            <div class="name">
+              <!--Confirm Password:<br />-->
+              <input type="password" placeholder="Confirm Password" name="password"  ngModel #password="ngModel"  required [(ngModel)]='address.user.password'><br />
+              <div *ngIf="registerForm.touched && password.errors?.required">Please enter your confirm password</div>
+            </div>
+            <div class="name">
+              <!--FullName:<br />-->
+              <input type="text" name="fullName" placeholder="FullName" ngModel #fullName="ngModel" required [(ngModel)]='address.user.fullName' ><br />
+              <div *ngIf="registerForm.touched && fullName.errors?.required">Please enter your Name</div>
+            </div>
+            <div class="name">
+              <!--Age:<br />-->
+              <input type="number" name="age" placeholder="Age" ngModel #age="ngModel" required   [(ngModel)]='address.user.age' ><br />
+              <div *ngIf="registerForm.touched && age.errors?.required">Please enter your Age</div>
+            </div>
+            <div class="name">
+              <!--Qualification:<br />-->
+              <input   type="text" name="qualification" placeholder="Qualification" ngModel #qualification="ngModel" required [(ngModel)]='address.user.qualification' ><br />
+              <div *ngIf="registerForm.touched && qualification.errors?.required">Please enter your qualification</div>
+            </div>
+            <div class="name">
+              <!--Role:<br />-->
+              <select name="role" ngModel #role="ngModel" aria-placeholder="Role" required [(ngModel)]='address.user.role'><br />
+                <option value="Farmer" color="black">Farmer</option>
+                <option value="Representative"  color="black">Representative</option>
+                <option value="Consumer"  color="black">Consumer</option>
+              </select><br />
+             <div *ngIf="registerForm.touched && role.errors?.required">Please enter your Role</div>
+            </div>
+            <div class="name">
+              <!--Mobile Number:<br />-->
+              <input  type="text" name="mobileNumber" ngModel #mobileNumber="ngModel" placeholder="Mobile Number" required maxlength=10 minlength=10  [(ngModel)]='address.user.mobileNumber' ><br />
+              <div *ngIf="registerForm.touched && mobileNumber.errors?.required">Please enter your Mobile Number</div>
+              <div *ngIf="registerForm.touched && mobileNumber.errors?.minlength"> Please enter 10 digits</div>
+            </div>
+            <div class="name">
+              <!--Pin-Code:<br />-->
+              <input type="number" name="pincode" ngModel #pincode="ngModel" placeholder="Pin-Code" required [(ngModel)]='address.pincode' ><br />
+              <div *ngIf="registerForm.touched && pincode.errors?.required">Please enter your Pincode</div>
+            </div>
+            <div class="name">
+              <!--City:<br />-->
+              <input type="text" name="city" ngModel #city="ngModel" required placeholder="City" [(ngModel)]='address.city'><br />
+              <div *ngIf="registerForm.touched && city.errors?.required">Please enter your City</div>
+            </div>
+            <div class="name">
+              <!--State:<br />-->
+              <input type="text" name="state" ngModel #state="ngModel" placeholder="State" required [(ngModel)]='address.state'><br />
+              <div *ngIf="registerForm.touched && state.errors?.required">Please enter your State</div>
+            </div>
+            <div class="name">
+              <!--Street:<br />-->
+              <input type="text" name="street" ngModel #street="ngModel" placeholder="Street" required [(ngModel)]='address.street' ><br />
+              <div *ngIf="registerForm.touched && street.errors?.required">Please enter your Street</div>
+            </div>
+            <div class="name1">
+            <button [disabled]="!registerForm.valid">Register</button>
+          </div>
+          </div>
+    
+    
+        </form>
+        <div class="text-danger">
+          
+         
+          
+        
+         
+      </div>
+    </div>

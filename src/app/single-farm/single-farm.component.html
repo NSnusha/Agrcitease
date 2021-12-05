@@ -1,0 +1,233 @@
+
+
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agricitease</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <style>
+        .border {
+            display: inline-block;
+    height: 1250px;
+    margin: 8px;
+    padding: 10px;
+    width: 800px;
+
+        }
+        .col{
+            float: center;
+            position: absolute;
+            left: 28%;
+        }
+.r{
+    float: left;
+    /* text-align: right; */
+    margin-left: 750px;
+    margin-top: -310px;
+}
+        
+        .bt{
+            margin-left: 250px;
+    margin-top: 5px;
+    font-size: x-large;
+    width: 120px;
+    color: white;
+    background-color: chocolate;
+}
+h3{
+    margin-left: 110px;
+    font-family: 'Sriracha', cursive;
+}
+h2{
+    font-family: 'Sriracha', cursive;
+}
+
+        
+    </style>
+</head>
+
+<body>
+    
+        <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:170px; height:60px;    margin-left: 10px;
+            margin-top: 5px;"><span class="sr-only">(current)</span></a>
+     
+
+    <div class="row" style="height:50px;margin-top: -60px;">
+        <div class="col-7">
+            <h2 style="    margin-left: 550px;
+            margin-top: 10px;">YIELD CHOSEN</h2>
+        </div>
+       
+        <div class="col-1">
+            <button  (click)="allfarms()"  style="    margin-top: 10px;
+            width: 100px;
+            background-color: chocolate;
+            margin-left: 90px;
+            font-size: 20px;" class="btn btn-warning">All yields</button>
+        </div>
+        <div class="col-1">
+            <button  (click)="orders()"  style="    margin-top: 10px;
+            width: 100px;
+            background-color: chocolate;
+            margin-left: 85px;
+            font-size: 20px;" class="btn btn-warning">Orders</button>
+        </div>
+       <div class="col-1">
+        <button   type="button" class="btn btn-success" style=" margin-top: 10px;
+        width: 100px;
+        background-color: chocolate;
+        margin-left: 80px;
+        font-size: 20px;margin-right: 5px;"><a style="color: white;
+    width: 90px;
+    margin-left: -16px;
+    height: 33px;
+   
+    margin-top: -5px;" href="https://hangouts.google.com/call/74myG4QmPuRI0-L_Z0uxAEEN"   >Video call</a>  </button>
+       </div>
+                
+        <div class="col-2">
+
+         <!-- <div class="dropdown">
+
+                <button type="button" style="margin-top: 10px;width: 100px;background-color: chocolate;" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                    Crops
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item">Vegetables</a>
+                    <a class="dropdown-item">Cerals</a>
+                    <a class="dropdown-item">Link 3</a>
+                </div>
+            </div>--> 
+           
+                  <button   type="button" class="btn btn-success" class="nav-link "routerLink="/logout" style="font-size:20px;font-weight:bolder;margin-left: 85px;background-color: green;
+            color: white;width: 90px;margin-top: 10px;">logout</button>
+             
+        </div>
+        
+    </div>
+    <div class="col">
+        <br>
+        <div class ="card" style="background-color: white; width : 600px;border: 5px double black ">
+            <br/>
+            <img src="http://localhost:8080/RESTAPI2018/image/{{product.imageName}}" class="img-responsive"
+                style="  width: 380px;height: 250px;margin-left: 110px;border-radius: 15px;">
+
+                <hr class="solid" style = "border-top: 3px solid black;" >
+                <h2 style = "color: red; text-align: center;"><strong>Details:</strong></h2>
+
+                 <div class = "d1" style = "margin-left: 60px;margin-top: 50px;">
+                <img src = "assets/images/d1.png" style = "height :120px;width : 160px;border:solid 3px black">
+                <h4 style = "margin-left: 15px;margin-top: 10px;color:black;"><strong>Farmer Name</strong><br/></h4> <h4 style = "margin-left: 15px;margin-top: 10px;color:green;">{{ address.user.fullName |titlecase}}</h4>
+            </div> 
+            <div class = "d2" style = "margin-left: 360px;margin-top: -190px;">
+                <img src = "assets/images/fin.png" style = "height :120px;width : 160px;border:solid 3px black">
+                <h4 style = "margin-left: 40px;margin-top: 10px;color:black;"><strong>Crop </strong><br/></h4><h4 style = "margin-left: 40px;margin-top: 10px;color:green;">{{ farm.crop |titlecase}}</h4>
+            </div> 
+            <div class = "d3" style = "margin-left: 60px;margin-top: 40px;">
+                <img src = "assets/images/kind.jpg" style = "height :120px;width : 160px;border:solid 3px black">
+                <h4 style = "margin-left: 50px;margin-top: 10px;color:black;"><strong>Kind</strong><br/></h4> <h4 style = "margin-left: 30px;margin-top: 10px;color:green;">{{ farm.kindOfCrop|titlecase }}</h4>
+            </div> 
+            <div class = "d4" style = "margin-left: 360px;margin-top: -190px;">
+                <img src = "assets/images/quan.png" style = "height :120px;width : 160px;border:solid 3px black">
+                <h4 style = "margin-left: 25px;margin-top: 10px;color:black;"><strong>Crop Quantity</strong><br/></h4><h4 style = "margin-left: 30px;margin-top: 10px;color:green;">{{ farm.remainingQuantity }} Quintal</h4> 
+            </div>
+            <div class = "d5" style = "margin-left: 60px;margin-top: 35px;">
+                <img src = "assets/images/date.png" style = "height :120px;width : 160px;border:solid 3px black">
+                <h4 style = "margin-left: 15px;margin-top: 10px;color:black;"><strong>Date of Upload</strong><br/></h4><h4 style = "margin-left: 20px;margin-top: 10px;color:green;">{{ farm.doj |date:'dd-MMM-yy' }}</h4>
+            </div>
+            <div class = "d6" style = "margin-left:360px;margin-top: -190px;">
+                <img src = "assets/images/add.png" style = "height :120px;width : 160px;border:solid 3px black">
+                <h4 style = "margin-left: 45px;margin-top: 10px;color:black;"><strong>State</strong><br/> </h4><h4 style = "margin-left: 40px;margin-top: 10px;color:green;">{{ address.state|titlecase }}</h4>
+            </div>
+            <h3 style="color: red; margin-left: 50px;">DEMAND: {{ farm.cropQuantity-farm.remainingQuantity }} Quintal Booked already hurry up!!</h3>
+    
+            <hr class="solid" style = "border-top: 3px solid black;" >
+  
+            <video controls class="card-img-top" alt="Card image cap"
+            src="http://localhost:8080/RESTAPI2018/video/{{product.videoName}} "  class="img-responsive"
+            style="          width: 380px;height: 250px;margin-left: 110px;
+        "></video>
+            <button   (click)="showEditPopup()" class="btn btn-primary" class="bt">
+                Book
+            </button>
+            
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title"></h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <h4><i>For the successful deal please do contact the farmer.</i></h4>
+                            <h4>Your details have been sent to the farmer via sms.</h4>
+                            <h4>Are you sure to get the farmer slots</h4><br>
+                            <button type="submit" (click)="repQuantity()" (click)="testId1(farmId,consumerId)" button class="btn btn-default">Confirm</button>
+                        
+                            <button  class="btn btn-default" style="margin-left: 10px;
+                           
+                            color: red;" data-dismiss="modal" class="close">Cancel</button>
+                        </div>
+                        <div class="modal" id="myModal1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                    
+                                    <!-- Modal Header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title"></h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                    
+                                    <!-- Modal body -->
+                                    <div class="modal-body">
+                                        <p>Enter the quantity of the crop required:</p>
+                                        <input type="text" [(ngModel)]="quanReq">
+                                        <button (click)="placeOrder()" data-dismiss="modal" >Submit</button>
+                                    </div>
+                    
+                                    <!-- Modal footer -->
+                                    <div class="modal-footer">
+                                        <h4><i>Happy Dealing!!!</i></h4><br>
+                                    </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <h4><i>Happy Dealing!!!</i></h4><br>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+</div>
+        
+    </div>
+    
+</body>
+</html>

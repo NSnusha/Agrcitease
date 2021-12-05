@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    body{
+  background-color: white;
+
+  background-image: url(./assets/images/repre.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+  
+        *{
+         margin:0;
+         padding:0;
+         font-family: Century Gothic;
+         box-sizing:bottom box;
+        }
+      
+        
+        .write{
+        position:absolute;
+        left:40%;
+        top:100px;
+        }
+        
+        .container {
+          position: relative;
+          margin-top: 120px;
+          margin-left: 60px;
+          width: 500px;
+          height: 450px;
+        }
+        
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container:hover .overlay {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        
+        
+        .logo{
+            float:center;
+            position:relative;
+            left:70%;
+        }
+        .title {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container:hover .title {
+          top: 90px;
+        }
+        
+        .button {
+          position: absolute;
+          width: 500px;
+          left:150px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container:hover .button {
+          opacity: 1;
+        }
+        
+        .container1 {
+          position: relative;
+          margin-top: 120px;
+          margin-left: 60px;
+          width: 500px;
+          height: 300px;
+        }
+        
+        .overlay1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container1:hover .overlay1 {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        
+        .title1 {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container1:hover .title1 {
+          top: 90px;
+        }
+        
+        .button1 {
+          position: absolute;
+          width: 200px;
+          left:150px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button1 a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container1:hover .button1 {
+          opacity: 1;
+        }
+        .container2 {
+          position: relative;
+          margin-top: 120px;
+          margin-left: 60px;
+          width: 500px;
+          height: 450px;
+        }
+        
+        .overlay2 {
+          position: absolute;
+          top: 0;
+          left: 0;
+           width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container2:hover .overlay2 {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        .title2 {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container2:hover .title2 {
+          top: 90px;
+        }
+        
+        .button2 {
+          position: absolute;
+          width: 500px;
+          left:50px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button2 a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container2 :hover .button2 {
+          opacity: 1;
+        }
+        .container-fluid{
+          position:absolute;
+          top:85%;
+          
+        }
+        
+        .navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+  margin-top: 0.5px;
+  
+        
+        }
+        .image{
+          margin-top: 0px;
+          margin-bottom: 0px;
+          margin-left: -40px;
+          padding-right:10px;
+          background-position: left;
+         
+
+        }
+        .move{
+          padding-left: 120px;
+        }
+ 
+  
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+h1{
+  text-align: center;
+  color: antiquewhite;
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+
+  margin-top: 10px;
+        
+        }
+        .image{
+          margin-top: 5px;
+          margin-bottom: 15px;
+        }
+        .move{
+          padding-left: 120px;
+        }
+   
+        .image1{
+          margin-top: -120px;
+          margin-bottom: 200px;
+          margin-left: -60px;
+
+        }
+
+        .image2{
+          margin-top: -760px;
+          margin-bottom: 200px;
+          margin-left: 1100px;
+
+        }
+        .image3{
+          margin-top:-50px;
+          margin-bottom: 200px;
+          margin-left: 35px;
+
+        }
+
+        .btn1{
+          margin-top:60px;
+          margin-bottom: 200px;
+          margin-left: -110px;
+
+        }
+
+        .image5{
+          margin-top:-50px;
+          margin-bottom: 200px;
+          margin-left: 70px;
+
+        }
+
+        .image6{
+          margin-top:60px;
+          margin-bottom: 200px;
+          margin-left: -110px;
+
+        }
+
+        .image7{
+          margin-top:-680px;
+          margin-bottom: 200px;
+          margin-left: 400px;
+
+        }
+
+        .image8{
+          margin-top:-670px;
+          margin-bottom: 200px;
+          margin-left: 600px;
+
+        }
+
+        .image9{
+          margin-top:-870px;
+          margin-bottom: 200px;
+          margin-left: 820px;
+
+        }
+        .btn{
+          margin-top:-550px;
+          margin-bottom: 200px;
+          margin-left: 900px;
+
+        }
+        .btn1{
+          margin-top:-550px;
+          margin-bottom: 200px;
+          margin-left: 750px;
+
+        }
+        .btn2{
+          margin-top:-550px;
+          margin-bottom: 200px;
+          margin-left: 550px;
+
+        }
+        .btn3{
+          margin-top:-550px;
+          margin-bottom: 200px;
+          margin-left: 250px;
+
+        }
+        .btn4{
+          margin-top:-550px;
+          margin-bottom: 200px;
+          margin-left: 50px;
+
+        }
+        td.td-style {
+    text-align: left;
+    background-color: #fff;
+    border-radius: 0;
+    font-weight: 700;
+    line-height: normal;
+    border: solid 1px #d4d1d1;
+    padding: 5px;
+    font-size: 15px;
+}
+        th.head-style {
+    background-color: green;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 500;
+    border-right: solid 1px green;
+    text-align: center;
+    line-height: 33px;
+    color: #fff;
+}
+        
+
+        
+        
+
+</style>
+<body>
+  <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  
+              
+    <div id="container-fluid-1" >
+       <!---->
+     
+      <nav class="navbar navbar-expand-lg navbar-dark " >
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01"  >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:170px; height:60px"><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active" >
+              <a class="nav-link" routerLink="/profile" style="color:black;font-size:20px;;font-weight:bolder;">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"routerLink="/about" style="color:black;font-size:20px;;font-weight:bolder;">About</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link"  style="color:black;font-size:20px;;font-weight:bolder;" href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=ae1ef233-b571-4c7d-9ca0-29f51398038d&serviceInstanceID=2eb2ef53-0836-4051-bb28-44d789e79a5a">Chat</a>
+            
+      
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/addreview" style="color:black;font-size:20px;;font-weight:bolder;">Reviews/Queries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/crop" style="color:black;font-size:20px;;font-weight:bolder;">Market Statistics</a>
+            </li>
+            <li class="nav-item mr auto" >
+              <button   type="button" class="btn btn-success" class="nav-link "routerLink="/logout" style="font-size:20px;font-weight:bolder;margin-left: 389px;background-color: green;
+              color: white;width: 90px;margin-top: 5px;">logout</button>
+              
+              </li>
+
+          
+          </ul>
+          
+        </div>
+      </nav>
+    
+      
+   
+    <div class="container">
+        <div class="row">
+          <a class="nav-link" class="image1"><img src="assets/images/ad4.png" alt="" style="width:180px; height:560px"><span class="sr-only">(current)</span></a>
+
+          <a class="nav-link" class="image3"><img src="assets/images/black clip.png" alt="" style="widows: 10px; height:100px"><span class="sr-only">(current)</span></a>
+          
+          
+
+          
+
+            <a class="nav-link" class="image7"><img src="assets/images/plus.png" alt="" style="widows: 10px; height:100px"><span class="sr-only">(current)</span></a>
+          
+            <a class="nav-link" class="image8"><img src="assets/images/show.png" alt="" style="widows: 10px; height:100px"><span class="sr-only">(current)</span></a>
+
+
+           <a class="nav-link" class="image2"><img src="assets/images/ad5.png" alt="" style="width:190px; height:560px"><span class="sr-only">(current)</span></a>
+
+            <a class="nav-link" class="image9"><img src="assets/images/farmer1.png" alt="" style="width:190px; height:120px; margin-top: 200px;margin-left: 40px;"><span class="sr-only">(current)</span></a>
+
+
+            <button class="btn default" style="font: bolder;font-size: 20px;font-weight: bolder;height: 60px;margin-left: 135px;"(click)="viewprofile()" >VIEW PROFILE</button>
+            <button class="btn default" style="font: bolder;font-size: 20px;font-weight: bolder;height: 60px;margin-left: 390px;"(click)="farmUpload()" >ADD YIELD</button>
+            <button class="btn default" style="font: bolder;font-size: 20px;font-weight: bolder;height: 60px;margin-left: 620px;"  (click)="showFarmsbyId()">SHOW YIELDS</button>
+            <button class="btn default" style="font: bolder;font-size: 20px;font-weight: bolder;height: 60px;margin-left: 890px;"(click)="showdeals()" >VIEW DEALS</button>
+            
+
+
+
+
+<br>
+<br>
+</div>
+</div>
+</div>
+<div class="modalclass">
+  <div class="modal" id="empvModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+
+        <div class="modal-body">
+         
+          <table *ngIf="farms" class="table table-bordered table-striped table-hover table-sm text-center">
+            <thead>
+              <tr class="bg-info text-white">
+                <th class="head-style">Yield Id</th>
+                <th class="head-style">Crop</th>
+                <th class="head-style">Crop Quantity</th>
+                <th class="head-style">Date</th>
+                <th class="head-style">Field Area</th>
+                <th class="head-style">Kindofcrop</th>
+                
+                <th class="head-style">Delete</th>
+                <th class="head-style">Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr  *ngFor='let farm of farms'>
+                <td class='td-style'>{{farm.farmId}}</td>
+                <td class='td-style'>{{farm.crop|titlecase}} </td>
+                <td class='td-style'>{{farm.remainingQuantity}} </td>
+                <td class='td-style'>{{farm.doj | date:'dd-MMM-yy'}} </td>
+                <td class='td-style'>{{farm.fieldArea}}</td>
+                <td class='td-style'>{{farm.kindOfCrop|titlecase}} </td>
+               
+               
+                <td class='td-style'><button (click)="deletefarm(farm)" class="glyphicon glyphicon-trash"></button></td>
+                <td class='td-style'><button   (click)="showEditPopup(farm)" class="glyphicon glyphicon-pencil"></button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="modal" id="empsModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Update Form</h4>
+                </div>
+          
+                <div class="modal-body">
+                  <form class="form-group">
+
+                   Enter Crop Quantity:<br>
+                    <input type="number" name="cropQuantity" [(ngModel)]='editObject.cropQuantity' class="form-control"><br />
+                    Enter the area of the field cultivated:<br />
+                    <input type="number" name="fieldArea" [(ngModel)]='editObject.fieldArea' class="form-control"><br />
+                    
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button (click)="updateEmp()"  class="btn btn-primary btn-sm " data-dismiss="modal"  class="update" >Update</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+          <button class="btn btn-primary btn-sm " data-dismiss="modal"  class="close" >Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modalclass">
+  <div class="modal" id="empcModal">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+
+        <div class="modal-body">
+         
+          <table class="table table-bordered table-striped table-hover table-sm text-center">
+            <thead>
+              <tr class="bg-info text-white">
+                
+                <th class="head-style">Yield Id</th>
+                <th class="head-style">Crop </th>
+                <th class="head-style">Date</th>
+                <th class="head-style">Consumer Id</th>
+                <th class="head-style">Consumer Name</th>
+                <th class="head-style">Consumer Location</th>
+                <th class="head-style">Status</th>
+                <th class="head-style">Accept</th>
+                <th class="head-style">Reject</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ord of orders;let i=index">
+               
+                <td class='td-style'>{{ord.farmId}} </td>
+                <td class='td-style'>{{ordfarms[i].crop|titlecase}}</td>
+                <td class='td-style'>{{ordfarms[i].doj | date:'dd-MMM-yy'}}</td>
+                <td class='td-style'>{{ord.consumerId}} </td>
+                <td class='td-style'>{{ordcons[i].user.fullName|titlecase}}</td>
+                <td class='td-style'>{{ordcons[i].city}},{{ordcons[i].state|titlecase}}</td>
+                <td class='td-style'>{{ord.status|titlecase}} </td>
+                  <td class='td-style'><button (click)="updateOrd(ord)"  class="glyphicon glyphicon-ok" style="margin-left: 30px;" ></button></td>
+                  <td class='td-style'><button (click)="rejectOrder(ord)" class="glyphicon glyphicon-remove"  style="margin-left: 30px;"  ></button>
+                  </td> 
+              </tr>
+            </tbody>
+          </table>
+          <div class="modalclass">
+            <div class="modal" id="acceptModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login Form</h4>
+                  </div>
+        
+                  <div class="modal-body">
+                    <p>Enter the delivery date of the yield</p>
+                    <input type="date" [(ngModel)]="dateOfDelivery">
+                    <button (click)="dateof()" data-dismiss="modal">Submit</button>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm " class="close" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-sm " class="close" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+ 
+    
+
+
+
+
+
+
+
+
+

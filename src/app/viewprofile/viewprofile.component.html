@@ -1,0 +1,150 @@
+<style>
+
+.body {
+    overflow: hidden;
+    background-color: #4AA02C;
+    background-size: cover;
+    position: fixed;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    font: normal 14px/1.618em "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+
+  margin-top: 20px;
+  }
+  .image{
+          margin-top: 5px;
+          margin-bottom: 25px;
+        }
+        .move{
+          padding-left: 120px;
+        }
+
+  
+
+
+
+
+ 
+
+
+</style>
+
+ <div class = "body"> 
+   <div class = "eg">
+    <nav class="navbar navbar-expand-lg navbar-dark #7fc373b8" style="color: green;">
+              
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:108px; height:53px"><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active" >
+            <a class="nav-link" routerLink="/profile" style="color: white;"><h5><strong>Home </strong></h5><span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item" class="move">
+            <a class="nav-link" routerLink="/about" style="color: white;"><h5><strong>About</strong></h5></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register" style="color: white;"><h5><strong>Register</strong></h5></a>
+          </li>
+          <li class="nav-item">
+            <button (click)="showProfileEditPopup(address)" style="margin-top: 10px;
+            width: 105px;
+            color: white;
+            background-color: green;
+            font-size: 17px;
+            height: 40px;
+            font-weight: bolder;margin-left: 770px;">Edit profile</button>
+	  </li>
+        </ul>
+        
+      </div>
+    </nav>
+
+
+
+
+   </div> 
+<aside class="profile-card " style="border:solid 3px black;">
+    <header>
+        
+      <!-- here’s the avatar -->
+      <a target="_blank" href="#">
+        <img src="assets/images/farmera.png" class="hoverZoomLink" style ="height : 150px;width : 150px;" >
+      </a>
+  
+      <!-- the username -->
+      <h1>
+              {{address.user.fullName}}
+            </h1>
+    
+      <!-- and role or location -->
+      <h2>
+              <b>User Name : </b>{{address.user.userName}}<br/><br/>
+              <b>Mobile Number : </b>{{address.user.mobileNumber}}
+              <br/><br/>
+              <b>Age : </b>{{address.user.age}}<br/><br/>
+              <b>Address : </b>{{address.state}},
+                {{address.city}},
+                {{address.street}}.
+                            
+            </h2>
+  
+    </header>
+  
+    <!-- bit of a bio; who are you? -->
+    <div class="profile-bio">
+  
+      <p style = "color: indigo;">
+        <strong>{{address.user.role}} at Agricitease.</strong>
+      </p>
+  
+    </div>
+  
+    <!-- some social links to show off -->
+  </aside>
+</div> 
+<div class="modalclass">
+  <div class="modal" id="editProfileModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title" style="margin-left: 105px;">Details to be edited</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        </div>
+        <div class="modal-body">
+          <form class="form-group" style="font-weight: bolder;">
+            Enter Full-Name: <input type="text" [(ngModel)]="profileEditObject.user.fullName" [ngModelOptions]="{standalone: true}" class="form-control"><br/>
+            Enter MobileNumber: <input type="text"  [(ngModel)]="profileEditObject.user.mobileNumber" [ngModelOptions]="{standalone: true}" class="form-control"><br/>
+            Enter Age: <input type="number" [(ngModel)]="profileEditObject.user.age" [ngModelOptions]="{standalone: true}" class="form-control"><br/>
+            Enter State: <input type="text" [(ngModel)]="profileEditObject.state" [ngModelOptions]="{standalone: true}" class="form-control"><br/>
+            Enter Street: <input type="text" [(ngModel)]="profileEditObject.street" [ngModelOptions]="{standalone: true}" class="form-control"><br/>
+            Enter City: <input type="text"  [(ngModel)]="profileEditObject.city" [ngModelOptions]="{standalone: true}" class="form-control"><br/>
+            Enter Pincode: <input type="number" [(ngModel)]="profileEditObject.pincode" [ngModelOptions]="{standalone: true}" class="form-control">
+        </form>
+        <button class="btn btn-primary btn-sm " style="color: green;" class="close" data-dismiss="modal" (click)="updateProfile()">Update</button>
+      </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
