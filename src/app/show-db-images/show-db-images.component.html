@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <style>
+        .navbar-nav > li{
+        padding-left:10px;
+        padding-right:10px;
+      
+        margin-top: 10px;
+              
+              }
+              .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+              .image{
+                margin-top: 5px;
+                margin-bottom: 15px;
+              }
+              .move{
+                padding-left: 120px;
+              }
+              p,h2{
+                font-family: 'Sriracha', cursive;
+                background-color: white;
+              }
+              h1{
+                font-family: 'Sriracha', cursive;
+              }
+              .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 415px;
+  margin-bottom: 25px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.overlay1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front ,.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #007bff14;;
+  height: 200px;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #007bff14;;
+ height: 200px;
+  color: white;
+  transform: rotateY(180deg);
+}
+.se{
+  background-color: antiquewhite;
+  height: 200px;
+}
+.dropdown:hover>.dropdown-menu{
+  display: block;
+}
+    </style>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark " >
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01"  >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:170px; height:60px"><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active" >
+              <a class="nav-link" routerLink="/consumerPage" style="color:black;font-size:20px;;font-weight:bolder;">Home<span class="sr-only">(current)</span></a>
+            </li>
+           
+           
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about" style="color:black;font-size:20px;;font-weight:bolder;">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/addreview" style="color:black;font-size:20px;;font-weight:bolder;">Reviews/Queries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  style="color:black;font-size:20px;;font-weight:bolder;" href="https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=eu-gb&integrationID=ae1ef233-b571-4c7d-9ca0-29f51398038d&serviceInstanceID=2eb2ef53-0836-4051-bb28-44d789e79a5a">Chat</a>
+            
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-primary" style="        color: white;
+              font-size: 20px;
+              font-weight: bolder;
+              margin-top: 10px;
+              margin-left: 360px;
+              background-color: chocolate;
+              height: 38px;
+              margin-bottom: 12px;
+           " (click)="orders()">Orders</button>
+              </li>
+            
+            <li class="nav-item">
+                <div class="dropdown" >
+
+                    <button type="button" style="    color: white;
+                    font-size: 21px;
+                    font-weight: bolder;
+                    margin-top: 10px;
+                   width: 100px;
+                   height: 37px;
+                    background-color: chocolate; "  data-toggle="dropdown">
+                       Filters
+                    </button>
+                    <div class="dropdown-menu"    >
+                        <label >Crops</label>
+                        <a (click)="filterss('Vegetables')" class="dropdown-item" >Vegetables</a>
+                        <a (click)="filterss('Cereals')" class="dropdown-item" >Cerals</a>
+                        <a  (click)="filterss('Fruits')" class="dropdown-item" >Fruits</a>
+                    </div>
+                </div>
+              </li>
+
+            <li class="nav-item mr auto" >
+              <button   type="button" class="btn btn-success" class="nav-link "routerLink="/logout" style="    font-size: 20px;
+              font-weight: bolder;
+              margin-left: 10px;
+              background-color: green;
+              color: white;
+              width: 90px;
+              margin-top: 5px;">logout</button>
+              
+              </li>
+          
+          </ul>
+          
+        </div>
+      </nav>
+    <h2 style="text-align: center;margin-top: -25px;">List of yields</h2>
+   <!---->
+   
+    
+    <div class="row offset-md-1" style="margin-top: 4px;    padding: 15px;border-radius: 10px;">
+        <div class="col-md-3" *ngFor="let product of products;let i=index" style="width: 110px;">
+            <div class="flip-card" style="width: 11re;border-radius: 10px;">
+              <div class="flip-card-inner">
+              <div class="flip-card-front" style="margin-bottom: 25px;">
+           <b><h1 style="font-size: 25px;text-align: center;" class="card-test"> {{farms[i].crop|titlecase}}</h1>
+           </b>  
+           <img class="center" class="card-img-top" alt="Card image cap" class="rounded-circle" 
+                    src="http://localhost:8080/RESTAPI2018/image/{{product.imageName}} " style="height: 180px;width: 200px;margin: auto;"/>
+                 <b>
+                    <p style="font-size: 17px;text-align:center;" class="card-test">Name: {{addresses[i].user.fullName|titlecase}}</p>
+                   
+                    <p style="font-size: 17px;text-align: center;" class="card-test">Kindofcrop: {{farms[i].kindOfCrop|titlecase}}</p>
+                    <p style="font-size: 17px;text-align: center;" class="card-test">Crop quantity: {{farms[i].remainingQuantity}}  Quintal</p>
+              
+                    <p style="font-size: 17px;text-align: center;" class="card-test">Price: {{farms[i].price| currency:'INR'}}(per Quintal)</p>    
+
+                    <p style="font-size: 17px;text-align:center;" class="card-test">State: {{addresses[i].state|titlecase}}</p>
+                    
+                      </b></div>
+                    
+                       <div class="flip-card-back">
+                         
+                         <button style="margin-top: 100px;    width: 150px;
+                        border-radius: 10px;"  (click)="viewSingleFarm(farms[i])" class="btn btn-primary">View</button>
+                        </div>
+             
+                     
+               
+
+                <!--<div class="row">
+    <div class="col">
+        <div>{{product.price |currency:'USD'}}</div>
+    </div>-->
+            </div>
+            </div>
+            </div>
+            </div>
+            
+          
+            
+</body>
+
+</html>
+
+
+
+
+
+
+
+

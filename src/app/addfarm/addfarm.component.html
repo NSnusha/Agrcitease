@@ -1,0 +1,418 @@
+<html>
+  <head>
+      
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">   
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+    <style>
+        *{
+         margin:0;
+         padding:0;
+         font-family: Century Gothic;
+         box-sizing:bottom box;
+        }
+        
+        
+        .write{
+        position:absolute;
+        left:40%;
+        top:100px;
+        }
+        
+        .container {
+          position: relative;
+          margin-top: 120px;
+          margin-left: 60px;
+          width: 500px;
+          height: 300px;
+        }
+        
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container:hover .overlay {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        
+        
+        .logo{
+            float:center;
+            position:relative;
+            left:70%;
+        }
+        .title {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container:hover .title {
+          top: 90px;
+        }
+        
+        .button {
+          position: absolute;
+          width: 500px;
+          left:150px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container:hover .button {
+          opacity: 1;
+        }
+        
+        .container1 {
+          position: relative;
+          margin-top: 120px;
+          margin-left: 60px;
+          width: 500px;
+          height: 300px;
+        }
+        
+        .overlay1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container1:hover .overlay1 {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        
+        .title1 {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container1:hover .title1 {
+          top: 90px;
+        }
+        
+        .button1 {
+          position: absolute;
+          width: 200px;
+          left:150px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button1 a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container1:hover .button1 {
+          opacity: 1;
+        }
+        .container2 {
+          position: relative;
+          margin-top: 120px;
+          margin-left: 60px;
+          width: 500px;
+          height: 450px;
+        }
+        
+        .overlay2 {
+          position: absolute;
+          top: 0;
+          left: 0;
+           width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container2:hover .overlay2 {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        .title2 {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container2:hover .title2 {
+          top: 90px;
+        }
+        
+        .button2 {
+          position: absolute;
+          width: 500px;
+          left:50px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button2 a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container2 :hover .button2 {
+          opacity: 1;
+        }
+          body{
+  background-image: url(./assets/images/yield.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+ 
+  
+}
+
+
+
+.header{
+  text-align: center;
+  color: green;
+}
+.di{
+  background-color: white;
+  padding-left: 32px;
+  margin-left: 480px;
+  margin-right: 480px;
+  color: black;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  padding-bottom: 30px;
+  
+  
+}
+.g{
+  opacity:1;
+}
+.name{
+  padding-top: 10px;
+  border-radius: 5px;
+}
+input{
+  margin-top: 8px;
+  padding-right: 120px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+select{
+  padding-right: 185px;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+.id{
+  padding-right: 350px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+button{
+  background-color: #57B846;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+ margin-left: 100px;
+ padding-right: 20px;
+ padding-left: 10px;
+  margin-top: 50px;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+}
+
+.container-fluid{
+          position:absolute;
+          top:85%;
+          
+        }
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+  margin-top: 0.5px;
+  
+        
+        }
+        .image{
+          margin-top: 0px;
+          margin-bottom: 0px;
+          margin-left: -40px;
+          padding-right:10px;
+          background-position: left;
+        }
+        .move{
+          padding-left: 120px;
+        }
+        .header{
+  text-align: center;
+  color: green;
+}
+    </style>
+</head>
+<body>
+ 
+
+  
+
+
+
+<div id="google_translate_element"></div>
+    <div id="container-fluid-1" >
+     
+
+    
+  
+  
+
+      <nav class="navbar navbar-expand-lg navbar-dark ">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01"  >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:170px; height:60px"><span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active" >
+              <a class="nav-link" routerLink="/representative" style="color:white;font-size:20px;;font-weight:bolder;">Home<span class="sr-only">(current)</span></a>
+            </li>
+           
+           
+            <li class="nav-item">
+              <a class="nav-link"routerLink="/about" style="color:white;font-size:20px;;font-weight:bolder;">About</a>
+            </li>
+            <li class="nav-item">
+              <button   type="button" class="btn btn-success" class="nav-link "routerLink="/logout" style="font-size:20px;font-weight:bolder;margin-left: 725px;background-color: green;
+              color: white;width: 90px;margin-top: 5px;">logout</button>
+              
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+  
+ <div class="g">
+ 
+
+ 
+      <form #farmform="ngForm" (ngSubmit)="addfarm(farmform.value)">
+        <div class="di">
+  
+          <div class="name">
+            Enter Yield:<br />
+            <input type="text" name="crop" [(ngModel)]='farm.crop'><br />
+          </div>
+         
+          <div class="name">
+            Enter the quantity of yield to be uploaded in Kg:<br />
+            <input type="number"  name="cropQuantity" [(ngModel)]='farm.cropQuantity'><br />
+          </div>
+          <div class="name">
+              Enter the kind of yield:<br />
+              <select  name="kindOfCrop" [(ngModel)]='farm.kindOfCrop' ><br />
+                <option value="Cereals" color="black">Cereals</option>
+                <option value="Vegetables"  color="black">Vegetables</option>
+                <option value="Fruits"  color="black">Fruits</option>
+              </select><br />
+            </div>
+            <div class="name">
+                Enter the farmer Id:<br />
+    
+    <select name="address" [(ngModel)]='farm.address.addressId'><br/>
+          <option value={{address.addressId}} *ngFor="let address of addresses">{{address.addressId}} </option>
+      </select><br/>
+            </div>
+          <div class="name1">
+            Date:<br />
+            <input type="date" id="doj" name="doj" [(ngModel)]='farm.doj'><br />
+          </div>
+          <div class="name">
+            Enter the area of field cultivated in hectares:<br />
+            <input type="number"  name="fieldArea" [(ngModel)]='farm.fieldArea'><br />
+          </div>
+          
+          <div class="name">
+            Amount :<br />
+            <input type="text" name="amount" [(ngModel)]='farm.price'><br />
+        </div>
+         
+          <div class="name1">
+          <button class="btn btn-primary">Next</button>
+        </div>
+        </div>
+      </form>
+  
+      </div>
+   
+    </div>
+</body> 
+</html> 

@@ -1,0 +1,166 @@
+
+<html>
+  <head>
+      
+      <style>
+          body{
+  background-image: url(./assets/images/yield.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+ 
+  
+}
+
+
+
+.header{
+  text-align: center;
+  color: green;
+}
+.di{
+  background-color: white;
+  padding-left: 32px;
+  margin-left: 480px;
+  margin-right: 480px;
+  color: black;
+  margin-bottom: 60px;
+  border-radius: 20px;
+  padding-bottom: 30px;
+  margin-top: 45;
+  
+}
+.g{
+  opacity:1;
+}
+.name{
+  padding-top: 10px;
+  border-radius: 5px;
+}
+input{
+  margin-top: 8px;
+  padding-right: 120px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+select{
+  padding-right: 185px;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+.id{
+  padding-right: 350px;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+button{
+  background-color: #57B846;
+  color: white;
+  padding-top: 12px;
+  padding-bottom: 12px;
+ margin-left: 100px;
+ padding-right: 20px;
+ padding-left: 10px;
+  margin-top: 20px;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+}
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+
+  margin-top: 10px;
+        
+        }
+        .image{
+          margin-top: 5px;
+          margin-bottom: 15px;
+        }
+        .move{
+          padding-left: 120px;
+        }
+
+      </style>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+        
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor01"  >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:170px; height:60px"><span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active" >
+          <a class="nav-link" routerLink="/profile" style="color:white;font-size:20px;;font-weight:bolder;">Home<span class="sr-only">(current)</span></a>
+        </li>
+       
+       
+        <li class="nav-item">
+          <a class="nav-link"routerLink="/about" style="color:white;font-size:20px;;font-weight:bolder;">About</a>
+        </li>
+        <li class="nav-item">
+          <button   type="button" class="btn btn-success" class="nav-link "routerLink="/logout" style="font-size:20px;font-weight:bolder;margin-left: 725px;background-color: green;
+          color: white;width: 90px;margin-top: 5px;">logout</button>
+          
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+ <div class="g">
+
+      <h1 class="header"></h1>
+      <form #farmUploadForm="ngForm" (ngSubmit)="farmUpload(farmUploadForm.value)">
+        <div class="di">
+  
+          <div class="name">
+            Enter Yield:<br />
+            <input type="text" name="crop" [(ngModel)]='farm.crop'><br />
+          </div>
+         
+          <div class="name">
+            Enter the quantity of yield to be uploaded in Quintal :<br />
+            <input type="number"  name="cropQuantity" [(ngModel)]='farm.cropQuantity'><br />
+          </div>
+          <div class="name">
+              Enter the kind of yield:<br />
+              <select  name="kindOfCrop" [(ngModel)]='farm.kindOfCrop' ><br />
+                <option value="Cereals" color="black">Cereals</option>
+                <option value="Vegetables"  color="black">Vegetables</option>
+                <option value="Fruits"  color="black">Fruits</option>
+              </select><br />
+            </div>
+          <div class="name1">
+            Date:<br />
+            <input type="date" id="doj" name="doj" [(ngModel)]='farm.doj'><br />
+          </div>
+          <div class="name">
+            Enter the area of field cultivated in acres:<br />
+            <input type="number"  name="fieldArea" [(ngModel)]='farm.fieldArea'><br />
+          </div>
+          
+          <div class="name">
+            Amount (per Quintal):<br />
+            <input type="text" name="amount" [(ngModel)]='farm.price'><br />
+        </div>
+         
+          <div class="name1">
+          <button class="btn btn-primary">Next</button>
+        </div>
+        </div>
+      </form>
+  
+      </div>
+   
+    
+    
+</body>
+</html>

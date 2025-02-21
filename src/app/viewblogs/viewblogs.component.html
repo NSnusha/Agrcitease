@@ -1,0 +1,73 @@
+<style>
+    
+    .he{
+        text-align: center;
+        text-decoration: purple;
+        text-decoration-style: solid;
+        text-rendering: optimizeSpeed;
+    }
+    .i{
+        margin-left: -12px;
+        margin-top: -12px;
+    }
+    .i1{
+margin-left : 10px;
+margin-top: 2px;
+    }
+    .i2{
+        margin-left : 140px;
+        margin-top: -30px;
+    }
+    .i3{
+        margin-left : 270px;
+        margin-top: -33px;
+    }
+    .t1{
+        text-transform: capitalize;
+        margin-top: -29px;
+        margin-left: 170px;
+    }
+    .t2{
+        text-transform: capitalize;
+        margin-top: -30px;
+        margin-left: 170px;  
+    }
+    .r1{
+        margin-top: -36px; 
+        margin-left: 35px;
+    }
+    .card{
+        border-width: 15px;
+    }
+</style>
+<body>
+    <div class = "he">
+        <h2 style="color:purple; font-family:'Times New Roman', Times, serif;margin-top: 10px;"> Explore About Agricitease</h2>
+        </div>
+        <br/>
+        <div class="row offset-md-1" style="margin: 6px;">
+            <div class="col-md-4" style="margin:-5px" *ngFor="let rev of blogs">
+        <div class="card-deck"  style="margin-bottom: 25px;">
+            <div class="card border-info md-4" style="width: 17re;height : 400px;">
+                <div class="card-header bg-transparent border-info" style = "text-align: center; font-family :Verdana, Geneva, Tahoma, sans-serif; color :brown;"> <h5><strong>{{rev.role|titlecase}} of <img src = "assets/images/Capture.JPG" style = "height : 45px;width : 80px;" ></strong></h5></div>
+                <div class="card-body">
+                <h6 class="card-test"> <h5 style = "font-family:'Courier New'"><div class = "i"><img src = "assets/images/s1.png" style = "height: 40px; width: 40px;"></div><div class = "r1"><b>Review by</b></div></h5><div class = "t1"><p style = "font-family:'Arial'">{{rev.name|titlecase}}</p></div></h6>
+                <br/><h6 class="card-test"> <h5 style = "font-family:'Courier New'"><div class = "i"><img src = "assets/images/rat2.jpg" style = "height: 40px; width: 40px;"></div><div class = "r1"><b>Rating</b></div></h5><div class = "t1"><p style = "font-family:'Arial'">{{rev.rating}} <img src = "assets/images/star.png" style = "height : 25px;width : 30px;" >rating</p></div></h6>
+               
+                <br/><h6 class="card-test"> <h5 style = "font-family:'Courier New'"><div class = "i"><img src = "assets/images/revi.jpg" style = "height: 40px; width: 40px;"></div><div class = "r1"><b>Review </b></div></h5><div class = "t2"><p style = "font-family:'Arial'">{{rev.review|titlecase}} <img src = "assets/images/blush.jpg" style = "height : 25px;width : 30px;"></p></div></h6> 
+            </div>
+              <div class="card-footer bg-transparent border-info">
+                <div class = "i1"><img src = "assets/images/like.png" style = "height : 30px;width : 50px;"></div>
+                <div class = "i2"><img src = "assets/images/dislike.png" style = "height : 30px;width : 50px;"></div>
+                <div class = "i3"><img src = "assets/images/comm.jpg" style = "height : 30px;width : 50px;"></div>
+              </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        
+</body>
+
+
+
+

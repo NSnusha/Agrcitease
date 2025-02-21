@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark #7fc373b8" style="color: green;">
+              
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" class="image"><img src="assets/images/Capture.JPG" alt="" style="width:108px; height:53px"><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active" >
+        <a class="nav-link" routerLink="/profile" style="color:black;"><h5><strong>Home </strong></h5><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" class="move">
+        <a class="nav-link" routerLink="/about" style="color: black;"><h5><strong>About</strong></h5></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register" style="color: black;"><h5><strong>Register</strong></h5></a>
+      </li>
+      <li class="nav-item">
+        <button   type="button" class="btn btn-success" class="nav-link "routerLink="/logout" style="font-size:20px;font-weight:bolder;margin-left: 880px;background-color: green;
+        color: white;width: 90px;margin-top: 5px;">logout</button>
+        
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+<h2 style="text-align: center;">Agricitease Yield Statistics</h2>
+<div class="chart-container" style="position: relative; height:40vh; width:70vw;margin-left: 240px;margin-top: 35px;">    
+    <canvas id="canvas"></canvas>    
+  </div>

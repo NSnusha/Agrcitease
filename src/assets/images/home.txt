@@ -1,0 +1,309 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+    <style>
+        *{
+         margin:0;
+         padding:0;
+         font-family: Century Gothic;
+         box-sizing:bottom box;
+        }
+        #container-fluid-1{
+          background-image:"images/farm2.png" ;
+        }
+        
+        .write{
+        position:absolute;
+        left:40%;
+        }
+        
+        .container {
+          position: relative;
+          margin-top: 150px;
+          margin-left: 60px;
+          width: 500px;
+          height: 300px;
+        }
+        
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container:hover .overlay {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        
+        
+        .logo{
+            float:center;
+            position: absolute;
+            left:1%;
+        }
+        .title {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container:hover .title {
+          top: 90px;
+        }
+        
+        .button {
+          position: absolute;
+          width: 500px;
+          left:150px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container:hover .button {
+          opacity: 1;
+        }
+        
+        .container1 {
+          position: relative;
+          margin-top: 150px;
+          margin-left: 60px;
+          width: 500px;
+          height: 300px;
+        }
+        
+        .overlay1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container1:hover .overlay1 {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        
+        .title1 {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container1:hover .title1 {
+          top: 90px;
+        }
+        
+        .button1 {
+          position: absolute;
+          width: 200px;
+          left:150px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button1 a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container1:hover .button1 {
+          opacity: 1;
+        }
+        .container2 {
+          position: relative;
+          margin-top: 150px;
+          margin-left: 60px;
+          width: 500px;
+          height: 450px;
+        }
+        
+        .overlay2 {
+          position: absolute;
+          top: 0;
+          left: 0;
+           width: 62%;
+          height: 110%;
+          background: rgba(0, 0, 0, 0);
+          transition: background 0.5s ease;
+        }
+        
+        .container2:hover .overlay2 {
+          display: block;
+          background: rgba(0, 0, 0, .3);
+        }
+        .title2 {
+          position: absolute;
+          width: 500px;
+          left: -100px;
+          top: 120px;
+          font-weight: 700;
+          font-size: 30px;
+          text-align: center;
+          text-transform: uppercase;
+          color: white;
+          z-index: 1;
+          transition: top .5s ease;
+        }
+        
+        .container2:hover .title2 {
+          top: 90px;
+        }
+        
+        .button2 {
+          position: absolute;
+          width: 500px;
+          left:50px;
+          top: 180px;
+          text-align: center;
+          opacity: 0;
+          transition: opacity .35s ease;
+        }
+        
+        .button2 a {
+          width: 200px;
+          padding: 12px 40px;
+          text-align: center;
+          color: white;
+          border: solid 2px white;
+          z-index: 1;
+        }
+        .container2 :hover .button2 {
+          opacity: 1;
+        }
+        .container-fluid{
+          position:absolute;
+          top:85%;
+          
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id="container-fluid-1">
+    <div class="logo">
+            <img src="images/logo.png" alt="" width="300" height="100">
+
+    </div>
+        <div class="write">
+                <h1 style="color:white;font-size:70px;float:left;"><b><i>ARE YOU?</i></b></h1>
+                </div>
+                
+                <div class="row">
+                
+                <div class="col-lg-4">
+                <div class="container2">
+                <p><img src="assets/images/farmera.png" alt="" style="border-radius:25px "></p>
+                <p class="title2">Farmer</p>
+                <div class="overlay2">
+                <div class="button2" style="position:absolute; left:-180px; top:150px"><a href="teacher_signup">SignUp</a></div>
+                <div class="button2" style="position:absolute; left:-30px; top:150px"><a href="login"> Login </a></div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="col-lg-4">
+                <div class="container1">
+                <p ><img src="assets/images/farmerb.jpg" alt="" style="border-radius:25px"></p>
+                <p class="title1">Representative</p>
+                <div class="overlay1">
+                <div class="button1" style="position:absolute; left:-20px; top:150px"><a href="login"> Login </a></div>
+                <div class="button1" style="position:absolute; left:120px; top:150px"><a href="teacher_signup"> Signup </a></div>
+                </div>
+                </div>
+                </div>
+                
+                <div class="col-lg-4">
+                <div class="container">
+                <p><img src="assets/images/farmer2.png" alt="" style="border-radius:25px"></p>
+                <p class="title">Consumer</p>
+                <div class="overlay">
+                <div class="button" style="position:absolute; left:-160px; top:150px"><a href="login"> Login </a></div>
+                <div class="button" style="position:absolute; left:-10px; top:150px"><a href="student_signup"> Signup </a></div>
+                </div>
+                </div>
+                <br><br>
+                </div>
+                
+                </div>
+                </div>
+                
+
+                <div class="container-fluid">
+                  <div class="row"  style="background-color:#1E8010">
+                    <div class="col-sm-4"> <br><img src="images/farmer.jpg"  style="border-radius:25px " width ="350" height = "180" bottom = "20" style="position:absolute ;background-color : lavender ;"></div>
+                    <div class="col-sm-6" ><br>
+                    <p style="font-size:25px;color:white"><i><b>* Farmer can post details of his farm</b></i></p>
+                    <p style="font-size:25px;color:white"><i><b> * Can attain maximum of amount that farmer spent.</b></i></p>
+                    <p style="font-size:25px;color:white"><i><b> * Information about the production of desired crop is given to educate the farmer.</b></i></p></div>
+                  </div>
+                  
+                  <div class="row" style="background-color:#36C822">
+                    <div class="col-sm-4"> <br><img src="images/representative.jpg" style="border-radius:25px " width ="350" height = "200" bottom = "20" style="position:absolute ;background-color:lavender;"></div>
+                    <div class="col-sm-6" >
+                  <p style="font-size:25px;color:white"><br><br><i>* Behalf of farmer.</i></p>
+                  <p style="font-size:25px;color:white"><i>* Earn his living.</i></p></div>
+                  </div>
+                  
+                  <div class="row" style="background-color:rgb(79, 219, 61)">
+                    <div class="col-sm-4"> <br><img src="images/consumer.jpg"  style="border-radius:25px " width ="350" height = "180" bottom = "20" style="position:absolute ;background-color :lavender;"></div>
+                    <div class="col-sm-6" ><br>
+                        <p style="font-size:25px;color:white"><i><br>* He can purchase the yield online in bulk.</i></p>
+                  <p style="font-size:25px;color:white"><i>* Cash on delivery. </i></p>
+                  </div>
+                  </div>
+                  
+                </div>
+   
+ 
+</body>
+
+  
