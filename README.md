@@ -12,6 +12,9 @@
 ## 🛠️ Tech Stack:  
 - **Frontend:** AngularJS, HTML, CSS  
 - **Backend:** Java, REST API  
-- **Security:** AES Encryption for secure data transmission  
+- **Security:** AES Encryption for secure data transmission
+
+## Project Video
+https://drive.google.com/file/d/1dPRDCBZMjYX2eXvHypXR7F-189QazPAG/view?usp=sharing
 
 Agricitease is designed to **revolutionize the agricultural trade**, ensuring **fairness, security, and efficiency** in farmer-customer interactions. 🚀 🌱
