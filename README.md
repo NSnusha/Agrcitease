@@ -1,6 +1,14 @@
-# 🌿 Agricitease – Bridging Farmers & Customers Directly 🚜  
+# 🌿 AgriCitease – Revolutionizing Agriculture Through Direct Trade 🌾💬
+A Node.js + Angular app that empowers farmers to manage sales, chat with buyers, and grow their reach. 🚜  
 
-**Agricitease** is a **secure and user-friendly web application** designed to eliminate intermediaries in the agricultural supply chain, enabling **direct transactions between farmers and customers**. This platform empowers farmers by providing them with a **transparent marketplace**, ensuring fair pricing and seamless trade.  
+AgriCitease is a secure and user-friendly web application designed to eliminate intermediaries in the agricultural supply chain by enabling direct transactions between farmers and customers.
+
+🔹 Empowers farmers with a transparent marketplace
+🔹 Ensures fair pricing and seamless trade
+🔹 Built using Angular (frontend), Node.js (backend), and MySQL (database)
+🔹 Features include crop listing, bulk order handling, and chatbot-assisted queries
+
+This platform bridges the digital divide in agriculture by offering tech-enabled trade with trust and simplicity.  
 
 ## 🔐 Key Features:  
 - **AES-Encrypted Framer Connect** – Secure and private real-time chat between farmers and customers.  
@@ -11,10 +19,11 @@
 
 ## 🛠️ Tech Stack:  
 - **Frontend:** AngularJS, HTML, CSS  
-- **Backend:** Java, REST API  
+- **Backend:** Java with Hibernate ORM , REST API,
+- **Database:** MySQL 
 - **Security:** AES Encryption for secure data transmission
 
 ## Project Video
-https://drive.google.com/file/d/1dPRDCBZMjYX2eXvHypXR7F-189QazPAG/view?usp=sharing
+https://drive.google.com/drive/folders/1DrTQejQrQCInYSJetG2go-EgUwvwSsQx?usp=sharing
 
-Agricitease is designed to **revolutionize the agricultural trade**, ensuring **fairness, security, and efficiency** in farmer-customer interactions. 🚀 🌱
+Agricitease is designed to **revolutionize the agricultural trade**, ensuring **fairness, security, and efficiency** in farmer-consumer interactions. 🚀 🌱
